@@ -1,4 +1,4 @@
-window.jQuery(document).ready(function($){
+window.jQuery(document).ready(function ($) {
 
 	'use strict';
 
@@ -10,7 +10,7 @@ window.jQuery(document).ready(function($){
 			}
 			else {
 				var height = $(window).height();        //Get the height of the browser window
-				$('.header-content').height(height -250);  //Resize the videocontainer div, with a size of 64 - page height.
+				$('.header-content').height(height - 250);  //Resize the videocontainer div, with a size of 64 - page height.
 			}
 		}).resize();
 	} else {
@@ -19,52 +19,52 @@ window.jQuery(document).ready(function($){
 
 
 	// jQuery smooth scrolling //
-	$('a[href*="#"]').on('click',function(e) {
-		e.preventDefault();
-		var target = this.hash;
-		var $target = $(target);
-		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top
-		}, 900, 'swing', function () {
-			window.location.hash = target;
-		});
-	});
+	// $('a[href*="#"]').on('click', function (e) {
+	// 	e.preventDefault();
+	// 	var target = this.hash;
+	// 	var $target = $(target);
+	// 	$('html, body').stop().animate({
+	// 		'scrollTop': $target.offset().top
+	// 	}, 900, 'swing', function () {
+	// 		window.location.hash = target;
+	// 	});
+	// });
 	// End jQuery smooth scrolling //
 
-	jQuery(document).ready(function($) {
-        // Scroll to top button
-        // browser window scroll (in pixels) after which the "back to top" link is shown
-        var offset = 300,
-            //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-            offset_opacity = 1200,
-            //duration of the top scrolling animation (in ms)
-            scroll_top_duration = 700,
-            //grab the "back to top" link
-            $back_to_top = $('.cd-top');
+	jQuery(document).ready(function ($) {
+		// Scroll to top button
+		// browser window scroll (in pixels) after which the "back to top" link is shown
+		var offset = 300,
+			//browser window scroll (in pixels) after which the "back to top" link opacity is reduced
+			offset_opacity = 1200,
+			//duration of the top scrolling animation (in ms)
+			scroll_top_duration = 700,
+			//grab the "back to top" link
+			$back_to_top = $('.cd-top');
 
-        //hide or show the "back to top" link
-        $(window).scroll(function() {
-            ($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
-            if ($(this).scrollTop() > offset_opacity) {
-                $back_to_top.addClass('cd-fade-out');
-            }
-        });
+		//hide or show the "back to top" link
+		$(window).scroll(function () {
+			($(this).scrollTop() > offset) ? $back_to_top.addClass('cd-is-visible') : $back_to_top.removeClass('cd-is-visible cd-fade-out');
+			if ($(this).scrollTop() > offset_opacity) {
+				$back_to_top.addClass('cd-fade-out');
+			}
+		});
 
-        //smooth scroll to top
-        $back_to_top.on('click', function(event) {
-            event.preventDefault();
-            $('body,html').animate({
-                    scrollTop: 0,
-                }, scroll_top_duration
-            );
-        });
-        // End Scroll to top
+		//smooth scroll to top
+		$back_to_top.on('click', function (event) {
+			event.preventDefault();
+			$('body,html').animate({
+				scrollTop: 0,
+			}, scroll_top_duration
+			);
+		});
+		// End Scroll to top
 
-        // Mobile Menu Show Hide Submenu
-        $('#header .navbar-default li.subnav ul').after('<div class="nav__expand"><i class="fas fa-chevron-down"></i></div>');
-        $("#header .navbar-default li.subnav .nav__expand").on('click',function(){
-            $(this).prev("ul").slideToggle("slow");
-        });
+		// Mobile Menu Show Hide Submenu
+		$('#header .navbar-default li.subnav ul').after('<div class="nav__expand"><i class="fas fa-chevron-down"></i></div>');
+		$("#header .navbar-default li.subnav .nav__expand").on('click', function () {
+			$(this).prev("ul").slideToggle("slow");
+		});
 	});
 
 
@@ -132,13 +132,13 @@ window.jQuery(document).ready(function($){
 				}
 			},
 			{
-		  breakpoint: 767,
-		  settings: {
-		    slidesToShow: 1,
-		    draggable: true
-			}
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					draggable: true
+				}
 
-		}
+			}
 		]
 	});
 	// End Team Slider Slick
@@ -181,7 +181,7 @@ window.jQuery(document).ready(function($){
 	// End Projects Slider Slick
 
 	// Students Review Slider Slick
-	$('.carousel-slider.general-slider').each(function() {
+	$('.carousel-slider.general-slider').each(function () {
 		$(this).slick({
 			arrows: false,
 			dots: true,
@@ -199,7 +199,7 @@ window.jQuery(document).ready(function($){
 					}
 				},
 				{
-				breakpoint: 767,
+					breakpoint: 767,
 					settings: {
 						slidesToShow: 1,
 						draggable: true
@@ -220,7 +220,7 @@ window.jQuery(document).ready(function($){
 
 
 	// Counter animation //
-	$('.themeioan_counter > h4').counterUp ({
+	$('.themeioan_counter > h4').counterUp({
 		delay: 10,
 		time: 3000
 	});
@@ -228,7 +228,7 @@ window.jQuery(document).ready(function($){
 
 
 	// Navigation Burger animation //
-	$('.burger-icon').on('click touchstart', function(e) {
+	$('.burger-icon').on('click touchstart', function (e) {
 		$(this).toggleClass('change');
 		$("#navbarCollapse").slideToggle();
 		e.preventDefault();
@@ -237,31 +237,31 @@ window.jQuery(document).ready(function($){
 
 
 	// Contact form submit process //
-	$('#contact-us-form').submit(function() {
+	$('#contact-us-form').submit(function () {
 		var form = $(this),
 			hasError = false;
 
 		form.find('.error-msg, .success-msg').remove();
 
-		form.find('.required-field').each(function() {
+		form.find('.required-field').each(function () {
 			$(this).removeClass('not-valid');
-			if($.trim($(this).val()) === '') {
-				$(this).addClass('not-valid').parent().append('<div class="error-msg">This is a required field.</div>');
+			if ($.trim($(this).val()) === '') {
+				$(this).addClass('not-valid').parent().append('<div class="error-msg">Это поле обязательное.</div>');
 				hasError = true;
-			} else if($(this).hasClass('email-field')) {
+			} else if ($(this).hasClass('email-field')) {
 				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-				if(!emailReg.test($.trim($(this).val()))) {
-					$(this).addClass('not-valid').parent().append('<div class="error-msg">You entered an invalid Email.</div>');
+				if (!emailReg.test($.trim($(this).val()))) {
+					$(this).addClass('not-valid').parent().append('<div class="error-msg">.</div>');
 					hasError = true;
 				}
 			}
 		});
-		if(!hasError) {
+		if (!hasError) {
 			var formData = $(this).serialize();
-			$.post('contact-process.php', formData, function(data) {
+			$.post('contact-process.php', formData, function (data) {
 				form.find('.required-field').val('');
 				form.append('<div class="success-msg">Thank you! We will contact you shortly.</div>');
-			}).fail(function() {
+			}).fail(function () {
 				//form.find('.required-field').val('');
 				form.append('<div class="error-msg">Error occurred. Please try again later.</div>');
 			});
@@ -272,18 +272,18 @@ window.jQuery(document).ready(function($){
 
 	// Slider Home 6 - with arrows Prev Next
 	$('.owl-navigation ').owlCarousel({
-		loop:false,
-		margin:0,
-		nav:true,
-		touchDrag:false,
-		mouseDrag:false,
-		autoplay:true,
-		autoplayTimeout:5000,
+		loop: false,
+		margin: 0,
+		nav: true,
+		touchDrag: false,
+		mouseDrag: false,
+		autoplay: true,
+		autoplayTimeout: 5000,
 		smartSpeed: 1000,
-		autoplayHoverPause:true,
-		responsive:{
-			0:{
-				items:1
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1
 			}
 		}
 	});
@@ -291,18 +291,18 @@ window.jQuery(document).ready(function($){
 
 	// Slider Home 2
 	$('.owl-carousel').owlCarousel({
-		loop:true,
-		margin:0,
-		nav:false,
-		touchDrag:true,
-		mouseDrag:true,
-		autoplay:true,
-		autoplayTimeout:5000,
+		loop: true,
+		margin: 0,
+		nav: false,
+		touchDrag: true,
+		mouseDrag: true,
+		autoplay: true,
+		autoplayTimeout: 5000,
 		smartSpeed: 1000,
-		autoplayHoverPause:true,
-		responsive:{
-			0:{
-				items:1
+		autoplayHoverPause: true,
+		responsive: {
+			0: {
+				items: 1
 			}
 		}
 	});
@@ -313,56 +313,99 @@ window.jQuery(document).ready(function($){
 });
 
 //Typed Text Start
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
 	'use strict';
 
-	if ($("#typed")[0]){
-	var typed = new Typed('#typed', {
-		stringsElement: '#typed-strings',
-		typeSpeed: 60,
-		backSpeed: 60,
-		startDelay: 1000,
-		loop: true,
-		loopCount: Infinity,
-		onComplete: function(self) {
-			prettyLog('onComplete ' + self);
-		},
-		preStringTyped: function(pos, self) {
-			prettyLog('preStringTyped ' + pos + ' ' + self);
-		},
-		onStringTyped: function(pos, self) {
-			prettyLog('onStringTyped ' + pos + ' ' + self);
-		},
-		onLastStringBackspaced: function(self) {
-			prettyLog('onLastStringBackspaced ' + self);
-		},
-		onTypingPaused: function(pos, self) {
-			prettyLog('onTypingPaused ' + pos + ' ' + self);
-		},
-		onTypingResumed: function(pos, self) {
-			prettyLog('onTypingResumed ' + pos + ' ' + self);
-		},
-		onReset: function(self) {
-			prettyLog('onReset ' + self);
-		},
-		onStop: function(pos, self) {
-			prettyLog('onStop ' + pos + ' ' + self);
-		},
-		onStart: function(pos, self) {
-			prettyLog('onStart ' + pos + ' ' + self);
-		},
-		onDestroy: function(self) {
-			prettyLog('onDestroy ' + self);
-		}
-	});
+	if ($("#typed")[0]) {
+		var typed = new Typed('#typed', {
+			stringsElement: '#typed-strings',
+			typeSpeed: 60,
+			backSpeed: 60,
+			startDelay: 1000,
+			loop: true,
+			loopCount: Infinity,
+			onComplete: function (self) {
+				prettyLog('onComplete ' + self);
+			},
+			preStringTyped: function (pos, self) {
+				prettyLog('preStringTyped ' + pos + ' ' + self);
+			},
+			onStringTyped: function (pos, self) {
+				prettyLog('onStringTyped ' + pos + ' ' + self);
+			},
+			onLastStringBackspaced: function (self) {
+				prettyLog('onLastStringBackspaced ' + self);
+			},
+			onTypingPaused: function (pos, self) {
+				prettyLog('onTypingPaused ' + pos + ' ' + self);
+			},
+			onTypingResumed: function (pos, self) {
+				prettyLog('onTypingResumed ' + pos + ' ' + self);
+			},
+			onReset: function (self) {
+				prettyLog('onReset ' + self);
+			},
+			onStop: function (pos, self) {
+				prettyLog('onStop ' + pos + ' ' + self);
+			},
+			onStart: function (pos, self) {
+				prettyLog('onStart ' + pos + ' ' + self);
+			},
+			onDestroy: function (self) {
+				prettyLog('onDestroy ' + self);
+			}
+		});
 	} else {
 		// Do something if class does not exist
 	}
 
+	const swithPhrase = (phrase) => {
+		switch (phrase) {
+			case 'Главная':
+				return $('html, body').offset().top
+			case 'Услуги':
+				return $('#features').offset().top
+			case 'О нас':
+				return $('#why-us').offset().top
+			case 'Наши работы':
+				return $('#projects-slider').offset().top
+			case 'Контакты':
+				return $('#contact').offset().top
+			default: return $('html, body').offset().top
+		}
+	}
+
+	$('.nav a').click((e) => {
+		e.preventDefault()
+		// $('.burger-icon').click();
+		$('html, body').animate({ scrollTop: swithPhrase(e.target.textContent) }, 600);
+
+	})
+
+	$('.tel-call').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
+
+	$('.blog-content a').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
+
+	$('.submodule a').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
+
+	$('.move a').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
 
 });
 
 function prettyLog(str) {
 }
 //Typed Text End
+

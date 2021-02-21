@@ -1342,10 +1342,10 @@ select:focus {
 /* 2.2. ========================= Header Content ========================= */
 
 .slider-clean1 {
-    background: url("../images/content/slider/slider1.jpg") no-repeat;
+    background: url("../images/content/slider/1.jpg") no-repeat;
 }
 .slider-clean2 {
-    background: url("../images/content/slider/slider2.jpg") no-repeat;
+    background: url("../images/content/slider/1.jpg") no-repeat;
 }
 .header-content {
     padding: 200px 0px 50px 0px;
