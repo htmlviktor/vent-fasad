@@ -403,6 +403,16 @@ document.addEventListener('DOMContentLoaded', function () {
 		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
 	})
 
+	$('.portfolio a').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
+
+	$('.blog a').click((e) => {
+		e.preventDefault();
+		$('html, body').animate({ scrollTop: $('#contact').offset().top }, 600);
+	})
+
 });
 
 function prettyLog(str) {

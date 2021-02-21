@@ -2190,7 +2190,8 @@ max-width:70px;
 
 .blog-photo img {
     width: 100%;
-    height: auto;
+    height: 230px;
+    object-fit: cover;
 }
 
 .blog-photo img {
@@ -2206,6 +2207,8 @@ max-width:70px;
     -ms-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
     transition: all 0.3s linear;
+    height: 230px;
+    object-fit: cover;
 }
 .themeioan_services:hover .blog-photo img,
 .themeioan_blog:hover .blog-photo img,
@@ -4355,4 +4358,15 @@ margin-top:15px;
 
 .logo-custom span:first-child{
     color: #FFB731;
+}
+
+.portfolio figure {
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
